@@ -1,0 +1,31 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file '/home/ruslancer/Desktop/hdmi/src/dvi_tx/dvi_tx.v'
+Analyzing Verilog file '/home/ruslancer/Desktop/hdmi/src/gowin_rpll/TMDS_rPLL.v'
+Analyzing Verilog file '/home/ruslancer/Desktop/hdmi/src/testpattern.v'
+Analyzing Verilog file '/home/ruslancer/Desktop/hdmi/src/video_top.v'
+Compiling module 'video_top'("/home/ruslancer/Desktop/hdmi/src/video_top.v":24)
+Compiling module 'testpattern'("/home/ruslancer/Desktop/hdmi/src/testpattern.v":7)
+Compiling module 'TMDS_rPLL'("/home/ruslancer/Desktop/hdmi/src/gowin_rpll/TMDS_rPLL.v":9)
+Compiling module 'DVI_TX_Top'("/home/ruslancer/Desktop/hdmi/src/dvi_tx/dvi_tx.v":1034)
+Compiling module '**'("/home/ruslancer/Desktop/hdmi/src/dvi_tx/dvi_tx.v":1033)
+NOTE  (EX0101) : Current top module is "video_top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "/home/ruslancer/Desktop/hdmi/impl/gwsynthesis/hdmi.vg" completed
+[100%] Generate report file "/home/ruslancer/Desktop/hdmi/impl/gwsynthesis/hdmi_syn.rpt.html" completed
+GowinSynthesis finish

@@ -1,0 +1,46 @@
+[
+ {
+  "InstFile" : "/home/ruslancer/Desktop/hdmi/src/video_top.v",
+  "InstLine" : 24,
+  "InstName" : "video_top",
+  "ModuleFile" : "/home/ruslancer/Desktop/hdmi/src/video_top.v",
+  "ModuleLine" : 24,
+  "ModuleName" : "video_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "/home/ruslancer/Desktop/hdmi/src/video_top.v",
+    "InstLine" : 74,
+    "InstName" : "testpattern_inst",
+    "ModuleFile" : "/home/ruslancer/Desktop/hdmi/src/testpattern.v",
+    "ModuleLine" : 7,
+    "ModuleName" : "testpattern"
+   },
+   {
+    "InstFile" : "/home/ruslancer/Desktop/hdmi/src/video_top.v",
+    "InstLine" : 115,
+    "InstName" : "u_tmds_rpll",
+    "ModuleFile" : "/home/ruslancer/Desktop/hdmi/src/gowin_rpll/TMDS_rPLL.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "TMDS_rPLL"
+   },
+   {
+    "InstFile" : "/home/ruslancer/Desktop/hdmi/src/video_top.v",
+    "InstLine" : 132,
+    "InstName" : "DVI_TX_Top_inst",
+    "ModuleFile" : "/home/ruslancer/Desktop/hdmi/src/dvi_tx/dvi_tx.v",
+    "ModuleLine" : 1034,
+    "ModuleName" : "DVI_TX_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "/home/ruslancer/Desktop/hdmi/src/dvi_tx/dvi_tx.v",
+      "InstLine" : 1065,
+      "InstName" : "rgb2dvi_inst",
+      "ModuleFile" : "/home/ruslancer/Desktop/hdmi/src/dvi_tx/dvi_tx.v",
+      "ModuleLine" : 2,
+      "ModuleName" : "~rgb2dvi.DVI_TX_Top"
+     }
+    ]
+   }
+  ]
+ }
+]

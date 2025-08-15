@@ -1,0 +1,46 @@
+//==============================================================================
+// TANG NANO 20K PIN CONSTRAINTS - HDMI KALEIDOSCOPIC PATTERN GENERATOR
+//==============================================================================
+// This file maps the FPGA signals to physical pins on the Tang Nano 20K board.
+// The Tang Nano 20K features a built-in HDMI connector that connects directly
+// to specific FPGA pins for high-speed differential signaling.
+//
+// HDMI SIGNAL MAPPING:
+// ===================
+// HDMI uses TMDS (Transition Minimized Differential Signaling) which requires
+// differential pairs for robust high-frequency transmission. Each RGB channel
+// plus the clock require separate differential pairs.
+//
+// SIGNAL STRENGTH CONFIGURATION:
+// ==============================
+// DRIVE=8: Sets 8mA drive strength for TMDS signals (sufficient for short cables)
+// PULL_MODE=NONE: Disables internal pull resistors (external termination used)
+//==============================================================================
+
+// ---- TMDS CLOCK DIFFERENTIAL PAIR (371.25MHz) ----
+// Pins 33,34: HDMI clock positive and negative outputs
+// Drives the pixel clock to the HDMI receiver for synchronization
+IO_LOC "O_tmds_clk_p" 33,34;
+IO_PORT "O_tmds_clk_p" PULL_MODE=NONE DRIVE=8;
+
+// ---- TMDS DATA CHANNEL 0: BLUE + SYNC SIGNALS ----  
+// Pins 35,36: Blue color data plus horizontal/vertical sync information
+IO_LOC "O_tmds_data_p[0]" 35,36;
+IO_PORT "O_tmds_data_p[0]" PULL_MODE=NONE DRIVE=8;
+
+// ---- TMDS DATA CHANNEL 1: GREEN COLOR DATA ----
+// Pins 37,38: Green color channel differential pair
+IO_LOC "O_tmds_data_p[1]" 37,38;
+IO_PORT "O_tmds_data_p[1]" PULL_MODE=NONE DRIVE=8;
+
+// ---- TMDS DATA CHANNEL 2: RED COLOR DATA ----
+// Pins 39,40: Red color channel differential pair  
+IO_LOC "O_tmds_data_p[2]" 39,40;
+IO_PORT "O_tmds_data_p[2]" PULL_MODE=NONE DRIVE=8;
+
+// ---- SYSTEM REFERENCE CLOCK INPUT ----
+// Pin 4: 27MHz onboard crystal oscillator on Tang Nano 20K
+// LVCMOS33: 3.3V CMOS logic level
+// PULL_MODE=UP: Internal pull-up resistor enabled for clock stability
+IO_LOC  "I_clk" 4;
+IO_PORT "I_clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
